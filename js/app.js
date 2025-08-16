@@ -44,8 +44,6 @@ function updateValues(temperature, cityName){
   cityNameField.innerText = cityName
 }
 
-
-
 // Begin weather effects
 
 // Rain Effect (1-15 scale)
@@ -124,7 +122,7 @@ function mistEffect(strength = 2){
   mistCloud.style.height = size/2 + 'px';
 
   //random x
-  mistCloud.style.left = Math.random() * window.innerWidth + 'px';
+  mistCloud.style.left = Math.random() * document.body.offsetWidth + 'px';
 
   //random rise
   const duration = Math.random() * 5 + 10;
@@ -197,6 +195,8 @@ function stopCurrentEffect(){
   stopSunnyEffect();
 }
 
+
+startMist(10)
 
 
 

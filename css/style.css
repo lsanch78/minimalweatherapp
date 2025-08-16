@@ -253,17 +253,20 @@ body{
   background: black;
   color: white;
   overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
 }
 
 .container {
   display: flex;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  height: 100dvh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 .temperature{
@@ -324,6 +327,10 @@ form button{
   }
 }
 
+.weather{
+  overflow: hidden;
+}
+
 
 .snowflake {
   position: absolute;
@@ -357,15 +364,17 @@ form button{
   height: 45px;
   background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 90%);
   border-radius: 50%;
-  top: 100vh;
+  top: 100dvh;
+  bottom: 0;
   animation: rise ease-in-out forwards;
   filter: blur(10px);
   z-index: -1;
+  overflow: hidden;
 }
 
 @keyframes rise {
-  from { transform: translateY(0); opacity: 0.5; }
-  to   { transform: translateY(-120vh); opacity: 0; }
+  from { transform: translateY(0); opacity: 0.5; overflow: hidden;}
+  to   { transform: translateY(-100dvh); opacity: 0; overflow: hidden;}
 }
 
 
