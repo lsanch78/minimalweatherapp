@@ -1,4 +1,3 @@
-//http://api.weatherapi.com/v1/current.json?key=21e2af1c506d4fc8bdd211218251508&q=London&aqi=no
 
 
 const cityNameField = document.querySelector('.city p');
@@ -15,7 +14,7 @@ form.addEventListener('submit', (event) => {
 
 const fetchResults = async (location) => {
 
-  let url = `http://api.weatherapi.com/v1/current.json?key=21e2af1c506d4fc8bdd211218251508&q=${location}&aqi=no`
+  let url = `https://api.weatherapi.com/v1/current.json?key=21e2af1c506d4fc8bdd211218251508&q=${location}&aqi=no`
 
   const response = await fetch(url)
   const data = await response.json()
