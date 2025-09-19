@@ -196,9 +196,6 @@ function stopCurrentEffect(){
 }
 
 
-startMist(10)
-
-
 
 //DEV MODE
 
