@@ -253,7 +253,6 @@ body{
   background: black;
   color: white;
   overflow: hidden;
-  height: 100vh;
   height: 100dvh;
 }
 
@@ -264,7 +263,6 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   height: 100dvh;
   overflow: hidden;
 }
@@ -338,7 +336,7 @@ form button{
   width: 8px;
   height: 8px;
   background-color: white;
-  border-radius: 50%;          /* makes it round */
+  border-radius: 50%;
   opacity: 0.9;                /* a little transparent */
   animation: snowFall linear forwards;
   z-index: -1;
