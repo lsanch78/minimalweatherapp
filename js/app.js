@@ -117,15 +117,15 @@ function mistEffect(strength = 2){
   mistCloud.classList.add('mist');
 
   //random size
-  const size = Math.random() * 150 + 50;
+  const size = Math.random() * 250 + 50;
   mistCloud.style.width = size + 'px';
   mistCloud.style.height = size/2 + 'px';
 
   //random x
-  mistCloud.style.left = Math.random() * document.body.offsetWidth + 'px';
+  mistCloud.style.left = Math.random() * document.body.offsetWidth - 100 + 'px';
 
   //random rise
-  const duration = Math.random() * 5 + 10;
+  const duration = Math.random() * 5 + 35;
   mistCloud.style.animationDuration = duration + 's';
 
   const base = Math.min(strength / 10/ 0.5);
@@ -268,7 +268,7 @@ function weatherEffectSelector(conditionCode){
       console.log("Cloudy conditions."); break;
     case 1009: startCloudEffect(100);
       console.log("Overcast skies."); break;
-    case 1030: startMist(500)
+    case 1030: startMist(50)
       console.log("Misty weather."); break;
     case 1063: console.log("Patchy rain possible."); break;
     case 1066: console.log("Patchy snow possible."); break;
@@ -279,9 +279,9 @@ function weatherEffectSelector(conditionCode){
       console.log("Blowing snow."); break;
     case 1117: startSnow(100)
       console.log("Blizzard conditions!"); break;
-    case 1135: startMist(500)
+    case 1135: startMist(50)
       console.log("Foggy conditions."); break;
-    case 1147: startMist(500)
+    case 1147: startMist(50)
       console.log("Freezing fog."); break;
     case 1150: startRain(0.3);
       console.log("Patchy light drizzle."); break;
