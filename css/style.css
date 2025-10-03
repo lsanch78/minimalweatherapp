@@ -269,6 +269,14 @@ body{
 }
 
 
+.search_form{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
 #weatherEffectsContainer{
   position: absolute;
   top: 0;
@@ -298,24 +306,28 @@ body{
   margin: 0;
 }
 
-form input{
+form input,
+form button {
   height: 3rem;
+  box-sizing: border-box;
+}
+
+form input {
   outline: none;
   border: 2px solid white;
-  margin: 0;
   font-size: 1.25rem;
   background: black;
   color: white;
 }
 
-form button{
-  height: 3rem;
+form button {
   padding: 0 1rem;
   border: 2px solid white;
   background-color: black;
   color: white;
   cursor: pointer;
 }
+
 
 .raindrop{
   position: absolute;
@@ -405,4 +417,23 @@ form button{
   10%  { opacity: 0.8; }
   90%  { opacity: 0.8; }
   to   { transform: translateX(120vw); opacity: 0; }
+}
+
+
+.lightning-flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #2d2d2d;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 9999;
+  animation: flashFade 0.2s linear;
+}
+
+@keyframes flashFade {
+  from { opacity: 0.7; }
+  to { opacity: 0; }
 }
