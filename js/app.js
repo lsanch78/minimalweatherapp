@@ -64,7 +64,7 @@ function rainEffect(strength = 2) {
   const duration = (Math.random() * 0.5 + 0.7) / strength;
   raindrop.style.animationDuration = duration + 's';
 
-  document.body.appendChild(raindrop);
+  document.getElementById("weatherEffectsContainer").appendChild(raindrop);
 
   // cleanup after it finishes falling
   setTimeout(() => {
@@ -94,7 +94,7 @@ function snowEffect(strength = 2){
   const duration = (Math.random() * 10.5 + 2) / strength;
   snowflake.style.animationDuration = duration + 's';
 
-  document.body.appendChild(snowflake);
+  document.getElementById("weatherEffectsContainer").appendChild(snowflake);
 
   setTimeout(() => {
     snowflake.remove();
@@ -131,7 +131,7 @@ function mistEffect(strength = 2){
   const base = Math.min(strength / 10/ 0.5);
   mistCloud.style.opacity = base + Math.random() * 0.3 + '%'
 
-  document.body.appendChild(mistCloud);
+  document.getElementById("weatherEffectsContainer").appendChild(mistCloud);
 
   setTimeout(() => {
     mistCloud.remove();
@@ -162,7 +162,7 @@ function cloudEffect(strength = 2){
   //randomize direction
   const direction = Math.random() < 0.5 ? 'normal' : 'reverse';
   cloud.style.animation = `cloudDrift ${duration}s linear ${direction} forwards`;
-  document.body.appendChild(cloud);
+  document.getElementById("weatherEffectsContainer").appendChild(cloud);
   setTimeout(() => {
     cloud.remove()
   }, duration * 1000);
@@ -200,7 +200,7 @@ function stopCurrentEffect(){
 //DEV MODE
 
 
-const DEV_MODE = false;
+const DEV_MODE = true;
 
 if (DEV_MODE) {
   document.addEventListener('keydown', handleDevKeys);

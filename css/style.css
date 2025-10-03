@@ -264,6 +264,17 @@ body{
   align-items: center;
   flex-direction: column;
   height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+
+#weatherEffectsContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
   overflow: hidden;
 }
 
